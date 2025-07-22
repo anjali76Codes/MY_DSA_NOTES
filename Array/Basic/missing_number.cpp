@@ -2,11 +2,12 @@
 using namespace std;
 
 
-    // Function to find the missing number using XOR
-    int missingNum(vector<int>& arr) {
+// Function to find the missing number using XOR
+int missingNum(vector<int>& arr) {
         int n = arr.size() + 1;  // Total number of elements if no number were missing
         int xor_all = 0;
         int xor_arr = 0;
+
 
 
 // The result of XORing all numbers from 1 to 5
@@ -17,10 +18,12 @@ using namespace std;
 // xor_all = 4 ^ 5 = 1
 // So, xor_all = 1 (after XORing all numbers from 1 to 5)
 
-        // XOR all numbers from 1 to n
-        for (int i = 1; i <= n; i++) {
+// XOR all numbers from 1 to n
+for (int i = 1; i <= n; i++) {
             xor_all ^= i;
-        }
+}
+
+
 
 
 

@@ -14,7 +14,7 @@ bool checkSorted(int arr[] , int n){
 
 int main(){
   
-  int arr[] = {3, 4, 7, 9, 100, 200 , 200000};
+  int arr[] = {3, 40000, 7, 9, 100, 200 , 200000};
   int n = sizeof(arr)/ sizeof(arr[0]);
   
   

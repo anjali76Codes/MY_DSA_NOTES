@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+
+// right rotation 
 void rotate(vector<int>& arr) {  
     int n = arr.size();
     if (n <= 1) return;

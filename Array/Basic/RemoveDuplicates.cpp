@@ -10,7 +10,7 @@ using namespace std ;
 
 // sorted array 
 int removeDuplic(vector<int> &nums){
-    int i = 0;
+    int i = 0;  
     for(int j = 1; j<nums.size(); j++){
         if(nums[j] != nums[i]){
              i++;
@@ -52,7 +52,7 @@ int main(){
     vector<int> v1 = {1,1,2,2,3,4,5,6,};
   
     // Call the function to remove duplicates
-    int res = removeDuplicates(v);
+    // int res = removeDuplicates(v);
     int res1 = removeDuplic(v1);
     
     // Output the new length of the array with unique elements
