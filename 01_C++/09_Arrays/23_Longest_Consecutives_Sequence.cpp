@@ -10,7 +10,7 @@
     - if ls(arr, x+1) == true then increase 
         -> x+=1 and count += 1
 
-3. updata longest -> longest = max(longest , count)
+3. update longest -> longest = max(longest , count)
 4. return longest 
 
 time complexity : O(n^2)
@@ -18,6 +18,7 @@ space complexity : O(1)
 
 
 Better Approach : 
+eg. 100,4,200,1,3,2 --> 1 2 3 4 100 200
 1. declaration 
     - lastsmaller = INT_MIN , count = 0 , longest = 1
 
@@ -111,6 +112,7 @@ int longest_consecutive_sequence_brute(vector<int> &arr, int n)
 int longest_consecutive_sequence_better(vector<int> &arr, int n)
 {
 
+    // 1 2 3 4 100 200
     // declaration
     int lastsmaller = INT_MIN;
     int count = 0;
@@ -127,8 +129,7 @@ int longest_consecutive_sequence_better(vector<int> &arr, int n)
             lastsmaller = arr[i];
         }
         /*
-         If this condition is true, it means that the current element is not consecutive to the previous
-         element, so we need to reset the count of consecutive elements to 1 and update the `lastsmaller`
+         If this condition is true, it means that the current element is not consecutive to the previous element, so we need to reset the count of consecutive elements to 1 and update the `lastsmaller`
          variable to the current element `arr[i]`.*/
         else if (arr[i] != lastsmaller)
         {

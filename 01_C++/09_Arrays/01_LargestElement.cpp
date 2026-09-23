@@ -9,13 +9,13 @@ Q. to find the largest element in the array
 - if any of them is greater then max = that element
 
 */
-
+ 
 
 
 #include<bits/stdc++.h>
 using namespace std;
 
-int main()
+int main() 
 {
 int n ;
 cin>>n;

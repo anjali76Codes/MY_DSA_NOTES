@@ -36,16 +36,22 @@ vector<int> maxMeetings(vector<int> &start, vector<int> &end)
 
     // find  max meetings can be possible
     vector<int> ans;
-    // ans[0] = 1;
-    int ansEnd = t[0].second; // first as always be possible
+  ans.push_back(t[0].first);  // 1
+    int ansEnd = t[0].second; // first as always be possible  2 
 
-    for (int i = 0; i < n; i++)
+
+
+   // after sorting: t = { (1, 2), (3, 4), (5, 7), (0, 6), (8, 9), (5, 9) }
+
+    for (int i = 1; i < n; i++)
     {
-        if (ans.empty())
-        {
-            ans.push_back(i + 1);
-        }
+        // if (ans.empty())
+        // {
+        //     ans.push_back(i + 1);
+        // }
 
+
+        // ans = 1 , 2 , 3 , 5 
         if (t[i].first > ansEnd)
         {
             ans.push_back(i + 1);

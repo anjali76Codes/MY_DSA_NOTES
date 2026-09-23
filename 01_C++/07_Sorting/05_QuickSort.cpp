@@ -9,7 +9,7 @@ int partition(int arr[], int low, int high)
     while (i < j)
     {
         while (arr[i] <= pivot && i <= high - 1)
-        {
+        {  
             i++;
         }
 
@@ -21,7 +21,7 @@ int partition(int arr[], int low, int high)
         {
             swap(arr[i], arr[j]);
         }
-    }
+    } 
 
     // Place pivot in the correct position
     swap(arr[low], arr[j]);

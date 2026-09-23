@@ -190,3 +190,47 @@ int main()
 
 
 
+
+
+
+// for +ve ,-ve both 
+class Solution {
+public:
+    int longestSubarray(vector<int>& nums, int k) {
+        int n = nums.size();
+
+        vector<int> preSum(n);
+        preSum[0] = nums[0];
+
+        for (int i = 1; i < n; i++) {
+            preSum[i] = preSum[i - 1] + nums[i];
+        }
+
+        unordered_map<int, int> mp;
+
+        int maxLen = 0;
+
+        for (int j = 0; j < n; j++) {
+
+            // If prefix sum itself is k
+            if (preSum[j] == k) {
+                maxLen = max(maxLen, j + 1);
+            }
+
+            int val = preSum[j] - k;
+
+            // If previous prefix sum exists
+            if (mp.find(val) != mp.end()) {
+                int len = j - mp[val];
+                maxLen = max(maxLen, len);
+            }
+
+            // Store only the first occurrence
+            if (mp.find(preSum[j]) == mp.end()) {
+                mp[preSum[j]] = j;
+            }
+        }
+
+        return maxLen;
+    }
+};

@@ -9,7 +9,7 @@ Brute  Approach :
 Note : Brute approach is not suitable for this because it take more time to execute which ie not required
 Time complexity : O(n!)+O(n) so if we have n = 15 then 15! is -> 10^12 that's take huge amount of time to execute
 
-
+ 
 Better approach : we can do this using stl
 
 Optimal Approach :

@@ -4,7 +4,6 @@ stack is a linear data structure that can be any of data type follow the LIFO me
 
 
 Time Complexity: O(N)
-
 Space Complexity: O(N)
 */
 

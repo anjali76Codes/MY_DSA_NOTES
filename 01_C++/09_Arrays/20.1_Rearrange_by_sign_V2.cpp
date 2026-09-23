@@ -42,7 +42,6 @@ vector<int> Rearrange_Positive_Negative_brute(vector<int> &arr, int n)
             arr[2 * i] = pos[i];
             arr[2 * i + 1] = neg[i];
         }
-
         // without altering store at end remaining +ve elements
         int index = neg.size() * 2;
         for (int i = neg.size(); i < pos.size(); i++)

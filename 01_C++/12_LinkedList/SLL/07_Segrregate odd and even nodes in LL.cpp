@@ -149,8 +149,8 @@ int main()
     insert_end(head, 5);
     insert_end(head, 6);
 
-    head = oddEvenGroup(head);
-    traverseLL(head);
+    // head = oddEvenGroup(head);
+    // traverseLL(head);
     cout << endl;
     head = segregate_odd_even(head);
     traverseLL(head);

@@ -126,6 +126,8 @@ int Majority_Element_optimal(int arr[], int n)
         }
     }
 
+
+    // verify 
     int cnt1 = 0;
     for (int i = 0; i < n; i++)
     {

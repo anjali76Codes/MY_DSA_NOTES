@@ -16,7 +16,6 @@ A monotonic stack is a stack that keeps elements in a specific order, either inc
 
 
 */
-
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -117,7 +117,7 @@ int main()
 {
     // head creation for both the linked list
     // for 1st list
-    Node *head1 = new Node(1);
+    Node *head1 = new Node(7);
     head1 = insert_end(head1, 2);
 
     // for 2nd list

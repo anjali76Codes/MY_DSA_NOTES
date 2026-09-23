@@ -6,11 +6,12 @@ string ReverseWords(string &s){
     string ans ="";
     string temp="";
 
+    // The man
     for(int i = n-1 ; i>=0 ; i--){
-        if(s[i]=='.'){
-            reverse(temp.begin(), temp.end());
+        if(s[i]==' '){
+            reverse(temp.begin(), temp.end());   // eht
             ans = ans+temp;
-            ans.push_back('.');
+            ans.push_back(' ');
             temp = "";
         }
 
@@ -27,7 +28,7 @@ string ReverseWords(string &s){
 int main()
 {
 
-    string s = "The.name.of.person.is.anjali";
+    string s = "The name of person is anjali";
     string res =ReverseWords(s);
 
     for(auto it: res){

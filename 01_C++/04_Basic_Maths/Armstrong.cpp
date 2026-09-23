@@ -5,15 +5,23 @@ int main()
 {
 
     int n;
-    cin >> n;
+    cin >> n;  // n = 1634
     int armstrong_sum = n;
     int sum = 0;
+    int digits = 0;
+
+    int temp = n;
+    while(temp>0){  // 1634 -  in total 4 digits
+        digits++;
+        temp /= 10;
+
+    }
 
     while (n > 0)
     {
-        int lastdigit = n % 10;
+        int lastdigit = n % 10;  // 4 
 
-        sum += (lastdigit * lastdigit * lastdigit);
+        sum += pow(lastdigit, digits);
         n = n / 10;
     }
 

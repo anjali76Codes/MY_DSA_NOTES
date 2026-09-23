@@ -8,7 +8,7 @@ Brute approach :
 3. hence time complexity : O(2N)
     - space complexity : O(N)
 
-Optimal Approach :
+Optimal Approach:
 1. instead of changing the data here we are changing the links in the list
 2. creating prev = null
           temp = head

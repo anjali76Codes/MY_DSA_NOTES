@@ -3,7 +3,7 @@ Matrix Rotated by 90 degree
 - we are given the n*m matrix and we have to rotate the matrix by 90 degree
 - we have to take the first row of the matrix and put it in the last column of the dummy matrix, take the second row of the matrix, and put it in the second last column of the matrix and so. 
 
-# Brute Approach :
+# Brute Approach:
 By Observation : on left and right j is changing but remains the same and i is constant but from(0 , n-1-i)
 -> if we n,m  = 4 then n-1 = 3 (i.e end) when it comes to next put it will occupy second last then third last and so .
 1. create a new array(dummy array) of n*m 
@@ -15,7 +15,7 @@ time complexity : O(n^2)
 space complexity : O(n^2)
 
 
-# Optimal approach :
+# Optimal approach:
 --> In this instead of using dummy array we are rotating the matrix itself
 
 1.  do the Transpose  of the matrix 
@@ -23,7 +23,7 @@ space complexity : O(n^2)
     - we are just swapping the row and column index of the matrix
     pattern found : j is always -> i+1 and 
     i from 0-> n-2 (last is the part of diagonal )
- 2.  Reverse each row of the matrix
+ 2. Reverse each row of the matrix
  3. return the matrix
 
  space complexity : O(1)

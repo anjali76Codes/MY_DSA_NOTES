@@ -1,16 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool  sortedArray(int arr[],  int n)
+bool sortedArray(int arr[], int n)
 {
     // check if sorted or not
     for (int i = 1; i < n; i++)
     {
         if (arr[i] > arr[i - 1])
-        {
-        }
-
-        else
         {
             return false;
         }
@@ -29,7 +25,7 @@ int main()
         cin >> arr[i];
     }
 
-    cout<<sortedArray(arr, n);
+    cout << sortedArray(arr, n);
 
     return 0;
 }

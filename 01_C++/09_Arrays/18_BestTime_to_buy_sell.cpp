@@ -33,7 +33,6 @@ int BestTime_to_buy_and_sell(vector<int>&arr ,int n){
         //update minimal - track the minimal 
         minimal = min(minimal , arr[i]);
 }
-
 return profit ; 
 }
 

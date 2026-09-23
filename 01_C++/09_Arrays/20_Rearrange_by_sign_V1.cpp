@@ -82,7 +82,7 @@ for(int i = 0 ; i<n ; i++){
         posindex+=2 ;
     }
 }
-return ans ; 
+return ans; 
 }
 
 int main()

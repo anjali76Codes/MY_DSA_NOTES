@@ -13,7 +13,7 @@ time complexity : O(n^2)
 space complexity : O(n)
 
 
-# Optimal approach : 
+# Optimal approach :
 1. Start from right, initialize maxi = INT_MIN
 2. Loop through the array
 3. If arr[i] > maxi, add arr[i] to ans
@@ -33,10 +33,10 @@ using namespace std;
 vector<int> Leaders_in_array_brute(vector<int> &arr, int n)
 {
 
-vector<int> ans ;
+    vector<int> ans;
     for (int i = 0; i < n; i++)
     {
-       bool leaders = true;
+        bool leaders = true;
         for (int j = i + 1; j < n; j++)
         {
             if (arr[j] > arr[i])
@@ -45,38 +45,31 @@ vector<int> ans ;
                 break;
             }
         }
-
-
-        if(leaders == true){
-        ans.push_back(arr[i]);
+        if (leaders == true)
+        {
+            ans.push_back(arr[i]);
+        }
     }
-    }
-
-    return ans ; 
-
-    
+    return ans;
 }
-
 
 vector<int> Leaders_in_array_optimal(vector<int> &arr, int n)
 {
-    vector<int>ans ;
+    vector<int> ans;
     int maxi = INT_MIN;
 
-    for(int i = n-1 ; i>=0 ; i--){
-        if(arr[i] > maxi ){
+    for (int i = n - 1; i >= 0; i--)
+    {
+        if (arr[i] > maxi)
+        {
             ans.push_back(arr[i]);
         }
 
-        // keep track of right max 
-        maxi  = max(maxi , arr[i]);
-
+        // keep track of right max
+        maxi = max(maxi, arr[i]);
     }
-
     sort(ans.begin(), ans.end());
-    return ans ;
-
-
+    return ans;
 }
 int main()
 {

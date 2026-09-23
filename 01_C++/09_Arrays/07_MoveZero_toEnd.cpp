@@ -1,5 +1,4 @@
 /*
-// Moving 0s to the end of the array
 
 
 1. Brute force Approach
@@ -56,7 +55,8 @@ for (int i = temp.size(); i < n; i++)
 
 
 }
-
+  
+              
 
 void moveZeroAtEnd_optimal(int arr[] , int n){
    int j = 0;
