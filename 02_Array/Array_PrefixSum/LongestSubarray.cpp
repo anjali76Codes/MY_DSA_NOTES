@@ -2,7 +2,7 @@
 using namespace std;
 
 
-
+// 1,2,3,1,1,1,1
 // logic if sum k is given then logic is I have to check presum : if presum = 9 and k = 3 then look for the left side for 6 if present then cal the len 
 int longestSubarraySumk(vector<int>&arr, int k){
     int n = arr.size();
@@ -16,7 +16,7 @@ int longestSubarraySumk(vector<int>&arr, int k){
         if(sum ==k){
         maxLen = max(maxLen , i+1);
         }
-
+    
         //2 . if not above then apply reverse engineering 
         // for eg. sum = 9 and k = 3 so rem would be 6 so check in map for the 6 if present then cal len and at the end by updating return maxlen
         int rem = sum -k; 

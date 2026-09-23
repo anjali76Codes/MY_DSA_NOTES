@@ -9,7 +9,7 @@ Input: ["flower","flow","flight"]
 after sorting : flight , flow , flower
 Output: "fl"
 
-# Brute approach :
+# Brute approach:
 steps :
 1. Iterate over each word in the array
 2. For each word, iterate over each character in the word

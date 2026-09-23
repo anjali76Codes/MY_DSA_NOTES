@@ -23,8 +23,10 @@ bool Isomorphic(string s1, string s2)
     // Iterate over each character in the strings
     for (int i = 0; i < s1.length(); i++)
     {
-        char char1 = s1[i];
-        char char2 = s2[i];
+
+        // EGG  ADD 
+        char char1 = s1[i];  // e
+        char char2 = s2[i]; // a
 
         // If char1 is already mapped in map1 but maps to a different char2, return false
         if (map1.find(char1) != map1.end() && map1[char1] != char2)

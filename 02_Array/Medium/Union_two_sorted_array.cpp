@@ -30,7 +30,7 @@ public:
                 j++;
             }
         }
-
+            
         // If array 'a' still has remaining elements
         while(i < n) {
             if(Union.size() == 0 || Union.back() != a[i]) {

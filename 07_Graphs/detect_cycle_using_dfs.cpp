@@ -5,13 +5,11 @@ using namespace std;
 
 bool detectCycle(int node ,int parent , vector<int>adj[], int visited[]){
     visited[node]= 1;
-    for(auto it : adj[node]){
-        
-        if(!visited[it]){
+    for(auto it : adj[node]){ 
+     if(!visited[it]){
            if( detectCycle(it ,node,  adj, visited)== true) return true;
         }
-        else if(it != parent) return true;
-        
+        else if(it != parent) return true;   
     }
     return false;
 }

@@ -12,6 +12,7 @@ max = arr[i]
 */
 
 
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -38,6 +39,8 @@ vector<int> leaders(vector<int> &arr)
     reverse(leaders.begin(), leaders.end());
     return leaders;
 }
+
+
 
 int main()
 {

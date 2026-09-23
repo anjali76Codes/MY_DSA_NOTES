@@ -63,7 +63,7 @@ int main()
 vector<int>res = bfsTraversal(adj, n ,m);
 for(auto it: res){
     cout<<it<<" ";
-}
+}  
 
 return 0;
 }

@@ -67,7 +67,11 @@ bool check_anagram(string s1, string s2)
     int fre[26] = {0};
     for (int i = 0; i < s1.length(); i++)
     {
-        fre[s1[i] - 'a']++;
+
+       // s = "anagram", t = "nagaram"
+        fre[s1[i] - 'a']++;  // a - 1  
+
+
     }
 
     for (int i = 0; i < s2.length(); i++)

@@ -34,7 +34,7 @@ public:
             int c = q.front().first.second;
             int t = q.front().second;
             tm = max(tm, t);
-            q.pop();
+            q.pop();    
 
             for(int i = 0; i < 4; i++) {
                 int nrow = r + drow[i];
