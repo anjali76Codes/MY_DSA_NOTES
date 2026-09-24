@@ -22,7 +22,7 @@ space complexity : O(N)
 
 Optimal approach:
 1. sum of first n natural number = n*(n+1)/2
-2. iterate i from 0 to n-1 and find the sum of the array 
+2. iterate i from 0 to n-1 and find the sum of the array
 3. return sum of first n natural number - sum of all element in array
 
 time complexity : O(N)
@@ -33,7 +33,7 @@ Use XOR :
 1. XOR of first n natural number = n ( in XOR same value -> return 0  and if one zero and any number -> that number)
 2. XOR of the array ( all zero except that one is missing )
 
-XOR is best because size can exceed in case of optimal approach but in case of XOR the size can  never be exhausted 
+XOR is best because size can exceed in case of optimal approach but in case of XOR the size can  never be exhausted
 
 
 */
@@ -81,9 +81,9 @@ int Missing_Number_better(int arr[], int N)
 
 int Missing_number_optimal(int arr[], int N)
 {
-    int sum = N*(N + 1) / 2;
+    int sum = N * (N + 1) / 2;
     int sum_arr = 0;
-    for (int i = 0; i <N-1; i++)
+    for (int i = 0; i < N; i++)
     {
         sum_arr += arr[i];
     }
@@ -91,13 +91,15 @@ int Missing_number_optimal(int arr[], int N)
     return (sum - sum_arr);
 }
 
-int Missing_Number_Pro(int arr[] , int N){
-    int xor1 = 0 ;
+int Missing_Number_Pro(int arr[], int N)
+{
+    int xor1 = 0;
     int xor2 = 0;
-   
-    for(int i = 0  ; i<N-1; i++){
+
+    for (int i = 0; i < N - 1; i++)
+    {
         xor2 = xor2 ^ arr[i];
-        xor1 = xor1 ^ (i+1);
+        xor1 = xor1 ^ (i + 1);
     }
 
     xor1 = xor1 ^ N;
@@ -118,7 +120,7 @@ int main()
     // int res = Missing_number_optimal(arr, N);
     // cout << res << endl;
     // cout<<Missing_number_optimal(arr, N);
-    cout<<Missing_Number_Pro(arr, N);
+    cout << Missing_Number_Pro(arr, N);
 
     return 0;
 }

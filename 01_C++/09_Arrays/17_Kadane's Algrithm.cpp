@@ -99,6 +99,15 @@ long long Maximum_SubarraySum_optimal(vector<int> &arr, int n)
     {
         sum += arr[i];
 
+
+ // When sum is greater, update maxsum and the corresponding start and end indices
+        if (sum > maxsum)
+        {
+            maxsum = sum;
+            ansStart = start;
+            ansEnd = i;
+        }
+
         // When sum is negative, reset sum to 0 and move start to the next element
         if (sum < 0)
         {
@@ -106,13 +115,7 @@ long long Maximum_SubarraySum_optimal(vector<int> &arr, int n)
             start = i + 1; // Start the new subarray from the next element
         }
 
-        // When sum is greater, update maxsum and the corresponding start and end indices
-        if (sum > maxsum)
-        {
-            maxsum = sum;
-            ansStart = start;
-            ansEnd = i;
-        }
+       
     }
 
     // Print the subarray with the maximum sum
